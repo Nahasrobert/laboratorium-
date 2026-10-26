@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustrasi berita kegiatan laboratorium</title>
+  <desc id="desc">Mahasiswa melakukan pengamatan dan eksperimen kimia dengan pendampingan.</desc>
+  <defs>
+    <linearGradient id="room" x2="0" y2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#cbdff0"/></linearGradient>
+  </defs>
+  <rect width="720" height="480" rx="30" fill="url(#room)"/>
+  <rect x="64" y="58" width="228" height="150" rx="16" fill="#fff" stroke="#9dbbd3" stroke-width="8"/>
+  <path d="M178 62v142M69 133h218" stroke="#9dbbd3" stroke-width="7"/>
+  <path d="M84 79h81v45H84zm107 0h81v45h-81zm-107 67h81v48H84zm107 0h81v48h-81z" fill="#b8e5ee"/>
+  <path d="M50 336h620v34H50z" fill="#ffbd36"/>
+  <path d="M86 370h544v70H86z" fill="#164a73"/>
+  <path d="M142 299c-13-41 4-91 41-96 36-5 56 33 51 72l-2 25z" fill="#0d795b"/>
+  <circle cx="182" cy="186" r="29" fill="#b96f47"/>
+  <path d="M154 180c2-31 51-44 65-8-22-10-38-2-65 8z" fill="#152f4a"/>
+  <path d="M185 228l61 13 29 94h-128z" fill="#f1f6fa"/>
+  <path d="M208 246l28 12-29 37-25-18z" fill="#d8e6ef"/>
+  <path d="M239 278l39-32 14 12-34 44z" fill="#b96f47"/>
+  <path d="M428 288c-5-36 9-76 39-83 32-8 54 26 50 60l-2 23z" fill="#123e63"/>
+  <circle cx="469" cy="185" r="28" fill="#d18a61"/>
+  <path d="M440 181c6-31 47-38 64-11l-4 14c-19-9-36-9-60 0z" fill="#202a39"/>
+  <path d="M449 229l51 0 31 104h-115z" fill="#ffbd36"/>
+  <path d="M449 253l-37 40-31-17-8 13 42 31 50-47z" fill="#d18a61"/>
+  <path d="M338 267h37l-6 30h23v10h-70v-10h22z" fill="#fff" stroke="#2e708e" stroke-width="5"/>
+  <path d="M335 287h41l-3 13h-35z" fill="#53b8a9"/>
+  <path d="M300 302h29m97-3h28" stroke="#ffbd36" stroke-width="7" stroke-linecap="round"/>
+  <path d="M298 334h130" stroke="#0b3556" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="338" cy="251" r="7" fill="#ffbd36"/>
+  <circle cx="363" cy="242" r="4" fill="#ffbd36"/>
+</svg>

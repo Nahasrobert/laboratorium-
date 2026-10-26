@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustrasi fasilitas laboratorium kimia</title>
+  <desc id="desc">Ilustrasi ruang laboratorium dengan meja kerja, jendela, rak, dan peralatan gelas.</desc>
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#c9def2"/></linearGradient>
+    <linearGradient id="bench" x2="0" y2="1"><stop stop-color="#194d79"/><stop offset="1" stop-color="#0b2d4d"/></linearGradient>
+    <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#a8e4e5" stop-opacity=".8"/></linearGradient>
+  </defs>
+  <rect width="720" height="480" rx="30" fill="#f1f7fc"/>
+  <path d="M40 44h640v300H40z" fill="url(#wall)"/>
+  <path d="M70 76h210v178H70z" fill="#fff" stroke="#93b6d3" stroke-width="10"/>
+  <path d="M175 78v174M72 165h206" stroke="#93b6d3" stroke-width="8"/>
+  <path d="M91 97h75v58H91zM186 97h75v58h-75zM91 175h75v60H91zM186 175h75v60h-75z" fill="#b7e5ed"/>
+  <path d="M392 78h226v174H392z" fill="#d4e5f2"/>
+  <path d="M407 98h196M407 151h196M407 204h196" stroke="#84a7c4" stroke-width="8"/>
+  <path d="M425 106h30v42h-30zM475 94h36v54h-36zM534 113h26v35h-26zM567 93h25v55h-25z" fill="url(#glass)" stroke="#5c8eaf" stroke-width="4"/>
+  <path d="M425 168h30v35h-30zM475 160h36v43h-36zM534 169h26v34h-26zM567 161h25v42h-25z" fill="#f4c54c" stroke="#5c8eaf" stroke-width="4"/>
+  <path d="M40 310h640v35H40z" fill="#ffbd36"/>
+  <path d="M65 345h590v89H65z" fill="url(#bench)"/>
+  <path d="M115 343v94M605 343v94" stroke="#082844" stroke-width="16"/>
+  <path d="M307 262h45l-8 37h27v13h-83v-13h27z" fill="url(#glass)" stroke="#397897" stroke-width="5"/>
+  <path d="M305 288h49l-5 17h-40z" fill="#e9ad2d"/>
+  <path d="M384 253h42l-8 36h22v13h-70v-13h22z" fill="url(#glass)" stroke="#397897" stroke-width="5"/>
+  <path d="M389 282h33l-4 10h-25z" fill="#54b6a6"/>
+  <path d="M480 263h45v38h-45z" rx="6" fill="#f8fbff" stroke="#397897" stroke-width="5"/>
+  <path d="M490 277h25M490 288h25" stroke="#397897" stroke-width="4"/>
+  <circle cx="540" cy="300" r="19" fill="#ffbd36"/>
+  <path d="M536 299h8m-4-4v8" stroke="#6b4b00" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="104" cy="290" r="17" fill="#0c805b"/>
+  <path d="M105 288c8-24 26-20 29-8-16 0-19 12-29 8zm-3 4c-15-21-30-10-28 2 13-7 18 1 28-2z" fill="#42b889"/>
+</svg>

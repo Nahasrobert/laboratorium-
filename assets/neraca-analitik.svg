@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustrasi neraca analitik</title>
+  <desc id="desc">Timbangan analitik digital dengan ruang timbang transparan.</desc>
+  <defs>
+    <linearGradient id="room" x2="0" y2="1"><stop stop-color="#e9eff2"/><stop offset="1" stop-color="#c9d5d9"/></linearGradient>
+    <linearGradient id="body" x2="0" y2="1"><stop stop-color="#f9faf8"/><stop offset="1" stop-color="#d9dfdc"/></linearGradient>
+    <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#dff4f3" stop-opacity=".4"/><stop offset="1" stop-color="#94c9cb" stop-opacity=".48"/></linearGradient>
+  </defs>
+  <rect width="480" height="600" fill="url(#room)"/>
+  <path d="M0 0h480v74H0z" fill="#63402f"/>
+  <path d="M22 0h22v245H22zm82 0h17v245h-17zm310 0h18v244h-18z" fill="#805138" opacity=".8"/>
+  <path d="M0 454h480v146H0z" fill="#42372d"/>
+  <path d="M83 95h311v252H83z" rx="12" fill="#e4e8e4" stroke="#b5bfbd" stroke-width="8"/>
+  <path d="M106 116h266v202H106z" fill="url(#glass)" stroke="#aabcbf" stroke-width="5"/>
+  <path d="M106 116h266v14H106z" fill="#f8faf8" opacity=".8"/>
+  <path d="M121 332h236l27 67H94z" fill="url(#body)" stroke="#aab1ae" stroke-width="6"/>
+  <ellipse cx="240" cy="345" rx="72" ry="12" fill="#d5dcd9" stroke="#919b98" stroke-width="4"/>
+  <path d="M163 344h154" stroke="#929c99" stroke-width="3"/>
+  <path d="M145 405h190l18 45H127z" fill="#f5f6f2" stroke="#9ca6a2" stroke-width="6"/>
+  <path d="M153 451h174l20 61H133z" fill="url(#body)" stroke="#aab1ae" stroke-width="6"/>
+  <path d="M172 464h98v28h-98z" rx="4" fill="#263b3c"/>
+  <text x="221" y="484" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#9fe1cf">0.0000</text>
+  <circle cx="296" cy="477" r="12" fill="#f1c94a" stroke="#c2a038" stroke-width="3"/>
+  <circle cx="327" cy="477" r="9" fill="#52aa9d" stroke="#378b80" stroke-width="3"/>
+  <path d="M156 522h168l-20 28H176z" fill="#b9c1bd"/>
+  <path d="M184 550h112l12 25H172z" fill="#a7b0ac"/>
+  <path d="M0 438h480" stroke="#837261" stroke-width="8"/>
+  <rect x="0" y="578" width="480" height="22" fill="#304954" opacity=".16"/>
+</svg>
