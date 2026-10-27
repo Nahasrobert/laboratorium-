@@ -15,6 +15,7 @@ $otherPages = array_values(array_filter($publicPages, function ($page) { return 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?> - FKIP Universitas Nusa Cendana</title>
     <link rel="icon" type="image/png" href="Logo_Undana.png">
+    <script>window.pageLoaderStartedAt = Date.now();</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,9 +35,55 @@ $otherPages = array_values(array_filter($publicPages, function ($page) { return 
     <style>
         html { scroll-behavior: smooth; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 300ms ease, visibility 300ms ease;
+        }
+        .page-loader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .page-loader__ring {
+            position: absolute;
+            inset: 0;
+            border: 3px solid transparent;
+            border-top-color: #003366;
+            border-right-color: #ffb800;
+            border-radius: 50%;
+            animation: page-loader-spin 1.3s linear infinite;
+        }
+        .page-loader__logo {
+            animation: page-loader-pulse 1.4s ease-in-out infinite;
+        }
+        @keyframes page-loader-spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes page-loader-pulse {
+            50% { transform: scale(.92); opacity: .8; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .page-loader, .page-loader__ring, .page-loader__logo { animation: none; transition: none; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-undanaGold selection:text-undanaDark">
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Memuat halaman">
+        <div class="relative flex h-24 w-24 items-center justify-center">
+            <div class="page-loader__ring"></div>
+            <img src="Logo_Undana.png" alt="" class="page-loader__logo h-14 w-14 object-contain">
+        </div>
+        <span class="sr-only">Memuat halaman...</span>
+    </div>
+    <noscript><style>.page-loader { display: none; }</style></noscript>
     <div class="bg-undanaDark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-4 flex-wrap">

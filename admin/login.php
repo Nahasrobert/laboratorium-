@@ -31,11 +31,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login Admin - Laboratorium Pendidikan Kimia</title>
+    <script>window.pageLoaderStartedAt = Date.now();</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{undanaBlue:'#003366',undanaGold:'#FFB800',undanaDark:'#0A192F'}}}};</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-loader { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: #fff; opacity: 1; visibility: visible; transition: opacity 300ms ease, visibility 300ms ease; }
+        .page-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        .page-loader__ring { position: absolute; inset: 0; border: 3px solid transparent; border-top-color: #003366; border-right-color: #ffb800; border-radius: 50%; animation: page-loader-spin 1.3s linear infinite; }
+        .page-loader__logo { animation: page-loader-pulse 1.4s ease-in-out infinite; }
+        @keyframes page-loader-spin { to { transform: rotate(360deg); } }
+        @keyframes page-loader-pulse { 50% { transform: scale(.92); opacity: .8; } }
+        @media (prefers-reduced-motion: reduce) { .page-loader, .page-loader__ring, .page-loader__logo { animation: none; transition: none; } }
+    </style>
 </head>
 <body class="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-10">
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Memuat halaman">
+        <div class="relative flex h-24 w-24 items-center justify-center">
+            <div class="page-loader__ring"></div>
+            <img src="../Logo_Undana.png" alt="" class="page-loader__logo h-14 w-14 object-contain">
+        </div>
+        <span class="sr-only">Memuat halaman...</span>
+    </div>
+    <noscript><style>.page-loader { display: none; }</style></noscript>
     <main class="w-full max-w-md rounded-3xl bg-white p-7 shadow-xl sm:p-9">
         <a href="../index.php" class="mb-8 inline-flex items-center gap-3">
             <img src="../Logo_Undana.png" alt="Logo Universitas Nusa Cendana" class="h-12 w-12 object-contain">
@@ -57,5 +75,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         <a href="../index.php" class="mt-5 block text-center text-sm text-slate-500 hover:text-undanaBlue">Kembali ke situs</a>
     </main>
+    <script>
+        const pageLoader = document.getElementById('page-loader');
+        const hidePageLoader = () => {
+            const minimumLoaderDuration = 500;
+            const elapsed = Date.now() - window.pageLoaderStartedAt;
+            window.setTimeout(() => {
+                pageLoader.classList.add('is-hidden');
+                pageLoader.setAttribute('aria-hidden', 'true');
+            }, Math.max(0, minimumLoaderDuration - elapsed));
+        };
+
+        if (document.readyState === 'complete') {
+            hidePageLoader();
+        } else {
+            window.addEventListener('load', hidePageLoader, { once: true });
+        }
+    </script>
 </body>
 </html>

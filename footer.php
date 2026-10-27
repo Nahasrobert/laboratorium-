@@ -74,6 +74,22 @@ $footerServicePages = array_values(array_filter($footerPages, function ($page) {
                 menuButton.focus();
             }
         });
+
+        const pageLoader = document.getElementById('page-loader');
+        const hidePageLoader = () => {
+            const minimumLoaderDuration = 500;
+            const elapsed = Date.now() - window.pageLoaderStartedAt;
+            window.setTimeout(() => {
+                pageLoader.classList.add('is-hidden');
+                pageLoader.setAttribute('aria-hidden', 'true');
+            }, Math.max(0, minimumLoaderDuration - elapsed));
+        };
+
+        if (document.readyState === 'complete') {
+            hidePageLoader();
+        } else {
+            window.addEventListener('load', hidePageLoader, { once: true });
+        }
     </script>
 </body>
 </html>
